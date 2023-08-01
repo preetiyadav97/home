@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<form action=" "  method="POST">
+    {% if dat %}
+     {% csrf_token %}
+        <label for="fname">Employee Name:</label><br>
+        <input type="text" id="fname" name="fname" value={{dat.name}}><br>
+
+        <label for="lname">Department:</label><br>
+        <input type="text" id="dept" name="dept" value={{dat.department}}><br>
+
+        <label for="fname">Email :</label><br>
+        <input type="email" id="email" name="email" value={{dat.email}}><br>
+
+        <label for="fname">Number:</label><br>
+        <input type="number" id="number" name="number" value={{dat.number}}><br><br>
+
+        <input type="submit" value="Submit">
+    {% endif %}
+</form> 
+
+</body>
+</html>
